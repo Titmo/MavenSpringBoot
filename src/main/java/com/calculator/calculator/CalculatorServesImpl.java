@@ -22,6 +22,10 @@ public class CalculatorServesImpl implements CalculatorServes{
     }
     @Override
     public String divide(int num1, int num2) {
-        return num1+"/"+num2+"="+(num1/num2);
+        if (num2 == 0) {
+            return "Делить на 0 нельзя!";
+        } else {
+            return num1 + "/" + num2 + "=" + (num1 / num2);
+        }
     }
 }
