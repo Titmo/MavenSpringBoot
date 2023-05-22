@@ -11,12 +11,10 @@ public class CalculatorController {
     public CalculatorController(CalculatorServes calculatorServes) {
         this.calculatorServes = calculatorServes;
     }
-
     @GetMapping(path = "/calculator")
     public String hello() {
         return calculatorServes.hello();
     }
-
     @GetMapping(path = "/calculator/plus")
     public String plus(@RequestParam int num1, @RequestParam int num2) {
         return calculatorServes.plus(num1,num2);
